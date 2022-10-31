@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04-Triangle-vpoint", "02-�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05-Triangle-Fan", "02-基本图元\05-Triangle-Fan\05-Triangle-Fan.vcxproj", "{F2E92B7D-EE86-41FD-A953-D105F62F2612}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05-Triangle-Fan", "02-基本图元\06-Triangle-STRIP\06-Triangle-Strip.vcxproj", "{FBE8435B-85F0-4502-B570-72FFB4AF4D57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -109,6 +111,14 @@ Global
 		{F2E92B7D-EE86-41FD-A953-D105F62F2612}.Release|Win32.Build.0 = Release|Win32
 		{F2E92B7D-EE86-41FD-A953-D105F62F2612}.Release|x64.ActiveCfg = Release|x64
 		{F2E92B7D-EE86-41FD-A953-D105F62F2612}.Release|x64.Build.0 = Release|x64
+		{FBE8435B-85F0-4502-B570-72FFB4AF4D57}.Debug|Win32.ActiveCfg = Debug|Win32
+		{FBE8435B-85F0-4502-B570-72FFB4AF4D57}.Debug|Win32.Build.0 = Debug|Win32
+		{FBE8435B-85F0-4502-B570-72FFB4AF4D57}.Debug|x64.ActiveCfg = Debug|x64
+		{FBE8435B-85F0-4502-B570-72FFB4AF4D57}.Debug|x64.Build.0 = Debug|x64
+		{FBE8435B-85F0-4502-B570-72FFB4AF4D57}.Release|Win32.ActiveCfg = Release|Win32
+		{FBE8435B-85F0-4502-B570-72FFB4AF4D57}.Release|Win32.Build.0 = Release|Win32
+		{FBE8435B-85F0-4502-B570-72FFB4AF4D57}.Release|x64.ActiveCfg = Release|x64
+		{FBE8435B-85F0-4502-B570-72FFB4AF4D57}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,6 +135,7 @@ Global
 		{B22A3730-0059-4063-87BF-4EC23A666757} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{4E28B2D4-E172-4CB6-B189-96DBDA7EBA2E} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{F2E92B7D-EE86-41FD-A953-D105F62F2612} = {8B951D87-0678-447F-881C-873AA2199B39}
+		{FBE8435B-85F0-4502-B570-72FFB4AF4D57} = {8B951D87-0678-447F-881C-873AA2199B39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {242C3172-FE13-4881-BD38-26AFEE2F4700}
