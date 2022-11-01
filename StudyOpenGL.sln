@@ -29,7 +29,9 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "04-Triangle-vpoint", "02-�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05-Triangle-Fan", "02-基本图元\05-Triangle-Fan\05-Triangle-Fan.vcxproj", "{F2E92B7D-EE86-41FD-A953-D105F62F2612}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "05-Triangle-Fan", "02-基本图元\06-Triangle-STRIP\06-Triangle-Strip.vcxproj", "{FBE8435B-85F0-4502-B570-72FFB4AF4D57}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06-Triangle-Strip", "02-基本图元\06-Triangle-STRIP\06-Triangle-Strip.vcxproj", "{FBE8435B-85F0-4502-B570-72FFB4AF4D57}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07-Triangle-color", "02-基本图元\07-Triangle-color\07-Triangle-Color.vcxproj", "{E26CD54D-F682-487C-9FC5-9C78FA5007D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +121,14 @@ Global
 		{FBE8435B-85F0-4502-B570-72FFB4AF4D57}.Release|Win32.Build.0 = Release|Win32
 		{FBE8435B-85F0-4502-B570-72FFB4AF4D57}.Release|x64.ActiveCfg = Release|x64
 		{FBE8435B-85F0-4502-B570-72FFB4AF4D57}.Release|x64.Build.0 = Release|x64
+		{E26CD54D-F682-487C-9FC5-9C78FA5007D7}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E26CD54D-F682-487C-9FC5-9C78FA5007D7}.Debug|Win32.Build.0 = Debug|Win32
+		{E26CD54D-F682-487C-9FC5-9C78FA5007D7}.Debug|x64.ActiveCfg = Debug|x64
+		{E26CD54D-F682-487C-9FC5-9C78FA5007D7}.Debug|x64.Build.0 = Debug|x64
+		{E26CD54D-F682-487C-9FC5-9C78FA5007D7}.Release|Win32.ActiveCfg = Release|Win32
+		{E26CD54D-F682-487C-9FC5-9C78FA5007D7}.Release|Win32.Build.0 = Release|Win32
+		{E26CD54D-F682-487C-9FC5-9C78FA5007D7}.Release|x64.ActiveCfg = Release|x64
+		{E26CD54D-F682-487C-9FC5-9C78FA5007D7}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -136,6 +146,7 @@ Global
 		{4E28B2D4-E172-4CB6-B189-96DBDA7EBA2E} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{F2E92B7D-EE86-41FD-A953-D105F62F2612} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{FBE8435B-85F0-4502-B570-72FFB4AF4D57} = {8B951D87-0678-447F-881C-873AA2199B39}
+		{E26CD54D-F682-487C-9FC5-9C78FA5007D7} = {8B951D87-0678-447F-881C-873AA2199B39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {242C3172-FE13-4881-BD38-26AFEE2F4700}
