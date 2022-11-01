@@ -37,6 +37,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08-lines", "02-基本图元
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "09-lines-circle", "02-基本图元\09-lines-circle\09-lines-circle.vcxproj", "{F756C7D1-9288-495D-9022-838F3AEC5905}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10-bezier-curve", "02-基本图元\10-bezier-curve\10-bezier-curve.vcxproj", "{0C97AEF7-A034-4FE1-AF7F-C0CA6C9B5740}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -149,6 +151,14 @@ Global
 		{F756C7D1-9288-495D-9022-838F3AEC5905}.Release|Win32.Build.0 = Release|Win32
 		{F756C7D1-9288-495D-9022-838F3AEC5905}.Release|x64.ActiveCfg = Release|x64
 		{F756C7D1-9288-495D-9022-838F3AEC5905}.Release|x64.Build.0 = Release|x64
+		{0C97AEF7-A034-4FE1-AF7F-C0CA6C9B5740}.Debug|Win32.ActiveCfg = Debug|Win32
+		{0C97AEF7-A034-4FE1-AF7F-C0CA6C9B5740}.Debug|Win32.Build.0 = Debug|Win32
+		{0C97AEF7-A034-4FE1-AF7F-C0CA6C9B5740}.Debug|x64.ActiveCfg = Debug|x64
+		{0C97AEF7-A034-4FE1-AF7F-C0CA6C9B5740}.Debug|x64.Build.0 = Debug|x64
+		{0C97AEF7-A034-4FE1-AF7F-C0CA6C9B5740}.Release|Win32.ActiveCfg = Release|Win32
+		{0C97AEF7-A034-4FE1-AF7F-C0CA6C9B5740}.Release|Win32.Build.0 = Release|Win32
+		{0C97AEF7-A034-4FE1-AF7F-C0CA6C9B5740}.Release|x64.ActiveCfg = Release|x64
+		{0C97AEF7-A034-4FE1-AF7F-C0CA6C9B5740}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -169,6 +179,7 @@ Global
 		{E26CD54D-F682-487C-9FC5-9C78FA5007D7} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{383D3245-A80E-4058-8063-8CCDAF0A7335} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{F756C7D1-9288-495D-9022-838F3AEC5905} = {8B951D87-0678-447F-881C-873AA2199B39}
+		{0C97AEF7-A034-4FE1-AF7F-C0CA6C9B5740} = {8B951D87-0678-447F-881C-873AA2199B39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {242C3172-FE13-4881-BD38-26AFEE2F4700}
