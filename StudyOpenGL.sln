@@ -33,6 +33,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "06-Triangle-Strip", "02-基
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "07-Triangle-color", "02-基本图元\07-Triangle-color\07-Triangle-Color.vcxproj", "{E26CD54D-F682-487C-9FC5-9C78FA5007D7}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "08-lines", "02-基本图元\08-lines\08-lines.vcxproj", "{383D3245-A80E-4058-8063-8CCDAF0A7335}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -129,6 +131,14 @@ Global
 		{E26CD54D-F682-487C-9FC5-9C78FA5007D7}.Release|Win32.Build.0 = Release|Win32
 		{E26CD54D-F682-487C-9FC5-9C78FA5007D7}.Release|x64.ActiveCfg = Release|x64
 		{E26CD54D-F682-487C-9FC5-9C78FA5007D7}.Release|x64.Build.0 = Release|x64
+		{383D3245-A80E-4058-8063-8CCDAF0A7335}.Debug|Win32.ActiveCfg = Debug|Win32
+		{383D3245-A80E-4058-8063-8CCDAF0A7335}.Debug|Win32.Build.0 = Debug|Win32
+		{383D3245-A80E-4058-8063-8CCDAF0A7335}.Debug|x64.ActiveCfg = Debug|x64
+		{383D3245-A80E-4058-8063-8CCDAF0A7335}.Debug|x64.Build.0 = Debug|x64
+		{383D3245-A80E-4058-8063-8CCDAF0A7335}.Release|Win32.ActiveCfg = Release|Win32
+		{383D3245-A80E-4058-8063-8CCDAF0A7335}.Release|Win32.Build.0 = Release|Win32
+		{383D3245-A80E-4058-8063-8CCDAF0A7335}.Release|x64.ActiveCfg = Release|x64
+		{383D3245-A80E-4058-8063-8CCDAF0A7335}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -147,6 +157,7 @@ Global
 		{F2E92B7D-EE86-41FD-A953-D105F62F2612} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{FBE8435B-85F0-4502-B570-72FFB4AF4D57} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{E26CD54D-F682-487C-9FC5-9C78FA5007D7} = {8B951D87-0678-447F-881C-873AA2199B39}
+		{383D3245-A80E-4058-8063-8CCDAF0A7335} = {8B951D87-0678-447F-881C-873AA2199B39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {242C3172-FE13-4881-BD38-26AFEE2F4700}
