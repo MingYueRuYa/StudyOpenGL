@@ -30,16 +30,16 @@ public:
     glColor3f(1, 1, 1);
 
     float3 rect[] = {
-      {110, 10, 0},
       {10, 10, 0},
+      {110, 10, 0},
       {10, 110, 0},
       {110, 110, 0},
-      {210, 10, 0},
+      {210, 210, 0},
     };
 
     glEnableClientState(GL_VERTEX_ARRAY);
     glVertexPointer(3, GL_FLOAT, sizeof(float3), rect);
-    glDrawArrays(GL_TRIANGLE_FAN, 0, 5);
+    glDrawArrays(GL_TRIANGLE_STRIP, 0, sizeof(rect)/sizeof(rect[0]));
     
   }
 
