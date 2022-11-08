@@ -47,6 +47,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "13-spline", "02-基本图�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "14-线的样式", "02-基本图元\14-线的样式\14-线的样式.vcxproj", "{D583AD3F-43A8-4D16-A264-493596E1FA08}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "15-平滑和反锯齿", "02-基本图元\15-平滑和反锯齿\15-平滑和反锯齿.vcxproj", "{EC135950-37EE-47B0-BC50-BF926E54980A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -199,6 +201,14 @@ Global
 		{D583AD3F-43A8-4D16-A264-493596E1FA08}.Release|Win32.Build.0 = Release|Win32
 		{D583AD3F-43A8-4D16-A264-493596E1FA08}.Release|x64.ActiveCfg = Release|x64
 		{D583AD3F-43A8-4D16-A264-493596E1FA08}.Release|x64.Build.0 = Release|x64
+		{EC135950-37EE-47B0-BC50-BF926E54980A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EC135950-37EE-47B0-BC50-BF926E54980A}.Debug|Win32.Build.0 = Debug|Win32
+		{EC135950-37EE-47B0-BC50-BF926E54980A}.Debug|x64.ActiveCfg = Debug|x64
+		{EC135950-37EE-47B0-BC50-BF926E54980A}.Debug|x64.Build.0 = Debug|x64
+		{EC135950-37EE-47B0-BC50-BF926E54980A}.Release|Win32.ActiveCfg = Release|Win32
+		{EC135950-37EE-47B0-BC50-BF926E54980A}.Release|Win32.Build.0 = Release|Win32
+		{EC135950-37EE-47B0-BC50-BF926E54980A}.Release|x64.ActiveCfg = Release|x64
+		{EC135950-37EE-47B0-BC50-BF926E54980A}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -224,6 +234,7 @@ Global
 		{D2BD1479-2E87-47A4-92F1-F5E0F47A4829} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{C0C8A37C-1696-49D8-8386-6FB40D01BCDD} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{D583AD3F-43A8-4D16-A264-493596E1FA08} = {8B951D87-0678-447F-881C-873AA2199B39}
+		{EC135950-37EE-47B0-BC50-BF926E54980A} = {8B951D87-0678-447F-881C-873AA2199B39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {242C3172-FE13-4881-BD38-26AFEE2F4700}
