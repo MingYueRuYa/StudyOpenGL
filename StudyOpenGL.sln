@@ -41,6 +41,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "10-bezier-curve", "02-基�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "11-矩形带绘制", "02-基本图元\11-矩形带的绘制\11-矩形带绘制.vcxproj", "{06EE4FAC-0793-440A-BCE0-1BB9D8E2F0BD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "12-多边形", "02-基本图元\12-多边形\12-多边形.vcxproj", "{D2BD1479-2E87-47A4-92F1-F5E0F47A4829}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -169,6 +171,14 @@ Global
 		{06EE4FAC-0793-440A-BCE0-1BB9D8E2F0BD}.Release|Win32.Build.0 = Release|Win32
 		{06EE4FAC-0793-440A-BCE0-1BB9D8E2F0BD}.Release|x64.ActiveCfg = Release|x64
 		{06EE4FAC-0793-440A-BCE0-1BB9D8E2F0BD}.Release|x64.Build.0 = Release|x64
+		{D2BD1479-2E87-47A4-92F1-F5E0F47A4829}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D2BD1479-2E87-47A4-92F1-F5E0F47A4829}.Debug|Win32.Build.0 = Debug|Win32
+		{D2BD1479-2E87-47A4-92F1-F5E0F47A4829}.Debug|x64.ActiveCfg = Debug|x64
+		{D2BD1479-2E87-47A4-92F1-F5E0F47A4829}.Debug|x64.Build.0 = Debug|x64
+		{D2BD1479-2E87-47A4-92F1-F5E0F47A4829}.Release|Win32.ActiveCfg = Release|Win32
+		{D2BD1479-2E87-47A4-92F1-F5E0F47A4829}.Release|Win32.Build.0 = Release|Win32
+		{D2BD1479-2E87-47A4-92F1-F5E0F47A4829}.Release|x64.ActiveCfg = Release|x64
+		{D2BD1479-2E87-47A4-92F1-F5E0F47A4829}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -191,6 +201,7 @@ Global
 		{F756C7D1-9288-495D-9022-838F3AEC5905} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{0C97AEF7-A034-4FE1-AF7F-C0CA6C9B5740} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{06EE4FAC-0793-440A-BCE0-1BB9D8E2F0BD} = {8B951D87-0678-447F-881C-873AA2199B39}
+		{D2BD1479-2E87-47A4-92F1-F5E0F47A4829} = {8B951D87-0678-447F-881C-873AA2199B39}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {242C3172-FE13-4881-BD38-26AFEE2F4700}
