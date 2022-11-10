@@ -55,6 +55,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "17-OpenGL扩展", "02-基�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "18-垂直同步控制", "02-基本图元\18-垂直同步的控制\18-垂直同步控制.vcxproj", "{5A309114-D67E-40EA-9340-D0CB9B14A919}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-3D投影", "03-3D投影", "{85FBF294-A1FA-47FE-BCD3-EE580F4D7AD0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "01-3D-Perspective-Project", "03-3D_Projection\01-perspective-projection\01-perspective-project.vcxproj", "{1DE725A7-5D8F-4A8C-8CBC-A02CA9C0EAF3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -239,6 +243,14 @@ Global
 		{5A309114-D67E-40EA-9340-D0CB9B14A919}.Release|Win32.Build.0 = Release|Win32
 		{5A309114-D67E-40EA-9340-D0CB9B14A919}.Release|x64.ActiveCfg = Release|x64
 		{5A309114-D67E-40EA-9340-D0CB9B14A919}.Release|x64.Build.0 = Release|x64
+		{1DE725A7-5D8F-4A8C-8CBC-A02CA9C0EAF3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1DE725A7-5D8F-4A8C-8CBC-A02CA9C0EAF3}.Debug|Win32.Build.0 = Debug|Win32
+		{1DE725A7-5D8F-4A8C-8CBC-A02CA9C0EAF3}.Debug|x64.ActiveCfg = Debug|x64
+		{1DE725A7-5D8F-4A8C-8CBC-A02CA9C0EAF3}.Debug|x64.Build.0 = Debug|x64
+		{1DE725A7-5D8F-4A8C-8CBC-A02CA9C0EAF3}.Release|Win32.ActiveCfg = Release|Win32
+		{1DE725A7-5D8F-4A8C-8CBC-A02CA9C0EAF3}.Release|Win32.Build.0 = Release|Win32
+		{1DE725A7-5D8F-4A8C-8CBC-A02CA9C0EAF3}.Release|x64.ActiveCfg = Release|x64
+		{1DE725A7-5D8F-4A8C-8CBC-A02CA9C0EAF3}.Release|x64.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -268,6 +280,7 @@ Global
 		{5E6FC3D3-5D27-48A0-BBDC-7031C6EC983F} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{2FEFB42F-13F1-43CB-BDD0-4FD853519537} = {8B951D87-0678-447F-881C-873AA2199B39}
 		{5A309114-D67E-40EA-9340-D0CB9B14A919} = {8B951D87-0678-447F-881C-873AA2199B39}
+		{1DE725A7-5D8F-4A8C-8CBC-A02CA9C0EAF3} = {85FBF294-A1FA-47FE-BCD3-EE580F4D7AD0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {242C3172-FE13-4881-BD38-26AFEE2F4700}
