@@ -34,11 +34,11 @@ public:
     glMatrixMode(GL_PROJECTION);
     // 将投影矩阵清空为单位矩阵
     glLoadIdentity();
-    gluPerspective(60, double(_width)/double(_height), 0.1, 1000);
+    gluPerspective(70, double(_width)/double(_height), 0.1, 1000);
 
     float3 arVert[] = {
         float3(0.5f, 0, -0.5),
-        float3(0.2f, 0.3, -0.5),
+        float3(0.1f, 0.3, -0.5),
         float3(0.8f, 0.3, -0.5),
     };
 
