@@ -17,13 +17,28 @@ void draw_points() {
   glColor3f(1.0, 0, 0);
   glPointSize(10);
   glBegin(GL_POINTS);
-  glVertex2f(-0.0, 0.0);
+  glVertex2f(-1.0, 0.0);
   glVertex2f(-1.0, 0.0);
   glVertex2f(1.0, 0.0);
   glVertex2f(0.0, 1.0);
   glVertex2f(0.0, -1.0);
   glEnd();
 
+  glFlush();
+}
+
+void draw_lines() {
+  glClear(GL_COLOR_BUFFER_BIT);
+  glColor3f(1.0, 0.0, 0.0);
+  glLineWidth(2.0);
+  glBegin(GL_LINES);
+  glVertex2f(-1.0, 0.0);
+  glVertex2f(1.0, 0.0);
+  glEnd();
+  glBegin(GL_LINES);
+  glVertex2f(0.0, -1.0);
+  glVertex2f(0.0, 1.0);
+  glEnd();
   glFlush();
 }
 
@@ -35,17 +50,9 @@ void draw_wire_teapot() {
 }
 
 void display() {
-  // glRotatef(215,1.0,1.0,1.0);
-  ///////////////////////////////////绘制四边形///////////////////////////////////
-  // glutWireTeapot(0.4);
-  //   glBegin(GL_POLYGON);
-  //     glVertex2f(-0.5,-0.5);
-  //     glVertex2f(-0.5,0.5);
-  //     glVertex2f(0.5,0.5);
-  //     glVertex2f(0.5,-0.5);
-  //   glEnd();
-  draw_points();
-  draw_wire_teapot();
+  // draw_points();
+  // draw_wire_teapot();
+  draw_lines();
 }
 void myReshape(GLsizei w, GLsizei h)
 
