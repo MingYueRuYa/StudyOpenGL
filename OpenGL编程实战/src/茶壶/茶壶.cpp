@@ -49,10 +49,27 @@ void draw_wire_teapot() {
   glFlush();
 }
 
+void draw_wire_cube() {
+  glClear(GL_COLOR_BUFFER_BIT);
+  glLineWidth(2.5);
+  glColor3f(1.0, 0.0, 0);
+  glutWireCube(0.8);
+  glFlush();
+}
+
+//void draw_wire_cylinder() {
+//  glClear(GL_COLOR_BUFFER_BIT);
+//  glLineWidth(2.5);
+//  glColor3f(1.0, 0.0, 0);
+//  gluCylinder(0.8);
+//  glFlush();
+//}
+
 void display() {
   // draw_points();
   // draw_wire_teapot();
-  draw_lines();
+  // draw_lines();
+  draw_wire_cube();
 }
 void myReshape(GLsizei w, GLsizei h)
 
