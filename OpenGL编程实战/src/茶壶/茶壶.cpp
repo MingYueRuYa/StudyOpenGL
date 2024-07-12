@@ -17,6 +17,7 @@ void draw_points() {
   glColor3f(1.0, 0, 0);
   glPointSize(10);
   glBegin(GL_POINTS);
+  glVertex2f(0.0, 0.0);
   glVertex2f(-1.0, 0.0);
   glVertex2f(-1.0, 0.0);
   glVertex2f(1.0, 0.0);
@@ -66,10 +67,10 @@ void draw_wire_cube() {
 //}
 
 void display() {
-  // draw_points();
+  draw_points();
   // draw_wire_teapot();
-  // draw_lines();
-  draw_wire_cube();
+   // draw_lines();
+  // draw_wire_cube();
 }
 void myReshape(GLsizei w, GLsizei h)
 
@@ -83,7 +84,7 @@ void myReshape(GLsizei w, GLsizei h)
   //   glOrtho(-1.5, 1.5, -1.5, 1.50, -10.0, 10.0);
   if (w <= h)
     glOrtho(-1.5, 1.5, -1.5 * (GLfloat)h / (GLfloat)w,
-            1.50 * (GLfloat)h / (GLfloat)w, -10.0, 10.0);
+            1.50 * (GLfloat)h / (GLfloat)w, -20, 20);
   else {
     glOrtho(-1.5 * (GLfloat)w / (GLfloat)h, 1.5 * (GLfloat)w / (GLfloat)h, -1.5,
             1.5, -10.0, 10.0);
