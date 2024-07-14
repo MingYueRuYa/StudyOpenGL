@@ -5,14 +5,16 @@
 #include <windows.h>
 // #include<GL\glut.h>
 #include <stdlib.h>
+
+#define _USE_MATH_DEFINES
+#include <math.h>
+
 #include "glaux.h"
 #include "glut.h"
 
 #pragma comment(lib, "legacy_stdio_definitions.lib")
 
-void init() {
-  glShadeModel(GL_FLAT);
-}
+void init() { glShadeModel(GL_FLAT); }
 
 void draw_points() {
   glClear(GL_COLOR_BUFFER_BIT);
@@ -59,40 +61,78 @@ void draw_triangle() {
   glFlush();
 }
 
+void draw_fill_triangle() {
+  glBegin(GL_TRIANGLES);
+  glVertex2f(-25.0, 0);
+  glVertex2f(0.0, 25);
+  glVertex2f(0.0, 0);
+  glEnd();
+  glFlush();
+}
+
+void draw_circle_by_triangle() {
+  glColor3f(0.2, 0.5, 0.5);
+  glBegin(GL_TRIANGLES);
+
+  float cx = 0, cy = 0, cz = 0;
+  float r = 25;
+
+  for (int i = 0; i < 360; i++) {
+    float x1 = r * cos(M_PI / 180.0 * i) + cx;
+    float y1 = r * sin(M_PI / 180.0 * i) + cy;
+
+    float x2 = r * cos(M_PI / 180.0 * (i + 1)) + cx;
+    float y2 = r * sin(M_PI / 180.0 * (i + 1)) + cy;
+
+    glVertex3f(cx, cy, cz);
+    glVertex3f(x1, y1, cz);
+    glVertex3f(x2, y2, cz);
+  }
+
+  glEnd();
+  glFlush();
+}
+
 void CALLBACK display() {
   // draw_lines();
-  glClearColor(0.0, 0.0, 0.0, 1.0);
-  glClear(GL_COLOR_BUFFER_BIT);
-  glLoadIdentity();
-  draw_lines();
-  glLoadIdentity();
-  glColor3f(1.0, 1.0, 1.0);
-  /* draw an original triangle */
-  draw_triangle();
+  //  glClearColor(0.0, 0.0, 0.0, 1.0);
+  //  glClear(GL_COLOR_BUFFER_BIT);
+  //  glLoadIdentity();
+  //  draw_lines();
+  //  glLoadIdentity();
+  //  glColor3f(1.0, 1.0, 1.0);
+  //  /* draw an original triangle */
+  //  draw_triangle();
+  //
+  //  /* translating a triangle along X_axis  */
+  //  glLoadIdentity();
+  //  glColor3f(1.0, 0.0, 0.0);
+  //  glTranslatef(-20, 0.0, 0.0);
+  //  draw_triangle();
+  //
+  ///* scaling a triangle along X_axis by 1.5 and along Y_axis by 0.5  */
+  //  glLoadIdentity();
+  //  glColor3f(0.0,1.0,0.0);
+  //  glScalef(1.5, 0.5, 0);
+  //  draw_triangle();
+  //
+  //  /* rotating a triangle in a counterclockwise direction about Z_axis */
+  //  glLoadIdentity();
+  //  glRotatef(90.0, 0.0, 0.0, 1.0);
+  //  glColor3f(0.0,0.0,1.0);
+  //  draw_triangle();
+  //
+  ///*  scaling a triangle along Y_axis and reflecting it about Y_axis  */
+  //  glLoadIdentity();
+  //  glScalef(1.0, -1,1.0);
+  //  glColor3f(1.0, 0.5, 0.0);
+  //  draw_triangle();
 
-  /* translating a triangle along X_axis  */
   glLoadIdentity();
-  glColor3f(1.0, 0.0, 0.0);
-  glTranslatef(-20, 0.0, 0.0);
-  draw_triangle();
+  // glColor3f(0.0, 0.5, 0.50);
+  // draw_fill_triangle();
 
-/* scaling a triangle along X_axis by 1.5 and along Y_axis by 0.5  */
-  glLoadIdentity();
-  glColor3f(0.0,1.0,0.0);
-  glScalef(1.5, 0.5, 0);
-  draw_triangle();
-
-  /* rotating a triangle in a counterclockwise direction about Z_axis */
-  glLoadIdentity();
-  glRotatef(90.0, 0.0, 0.0, 1.0);
-  glColor3f(0.0,0.0,1.0);
-  draw_triangle();
-
-/*  scaling a triangle along Y_axis and reflecting it about Y_axis  */
-  glLoadIdentity();
-  glScalef(1.0, -1,1.0);
-  glColor3f(1.0, 0.5, 0.0);
-  draw_triangle();
+  draw_circle_by_triangle();
 }
 void CALLBACK myReshape(GLsizei w, GLsizei h)
 
