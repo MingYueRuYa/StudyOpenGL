@@ -14,23 +14,11 @@
 
 #pragma comment(lib, "legacy_stdio_definitions.lib")
 
+int _width = 50;
+int _height = 50;
+
 void init() {
   glShadeModel(GL_FLAT);
-}
-
-void draw_points() {
-  glClear(GL_COLOR_BUFFER_BIT);
-  glColor3f(1.0, 0, 0);
-  glPointSize(10);
-  glBegin(GL_POINTS);
-  glVertex2f(-1.0, 0.0);
-  glVertex2f(-1.0, 0.0);
-  glVertex2f(1.0, 0.0);
-  glVertex2f(0.0, 1.0);
-  glVertex2f(0.0, -1.0);
-  glEnd();
-
-  glFlush();
 }
 
 void draw_lines() {
@@ -129,7 +117,6 @@ void draw_circle_by_triangle2() {
 
 void draw_triangle_fan() {
   glColor3f(0.2, 0.5, 0.5);
-  // glBegin(GL_TRIANGLES);
   glBegin(GL_LINE_LOOP);
   glVertex2f(0, 10);
   glVertex2f(0, 0);
@@ -142,6 +129,52 @@ void draw_triangle_fan() {
   glVertex2f(15, 5);
   glEnd();
 
+  glFlush();
+}
+
+float3 _circle2[362] = {};
+
+void draw_circle_by_triangle_fan() {
+  glColor3f(0.5, 0.5, 0.5);
+  float cx = 0, cy = 0, cz = 0;
+  float r = 25;
+
+    _circle2[0].x = cx;
+    _circle2[0].y = cy;
+    _circle2[0].z = cz;
+
+  for (int i = 0; i <= 360; i++) {
+    _circle2[i+1].x = r * cos(M_PI / 180.0 * i) + cx;
+    _circle2[i+1].y = r * sin(M_PI / 180.0 * i) + cy;
+    _circle2[i+1].z = cz;
+  }
+
+  glEnableClientState(GL_VERTEX_ARRAY);
+  glVertexPointer(3, GL_FLOAT, sizeof(float3), _circle2);
+  glDrawArrays(GL_TRIANGLE_FAN, 0, 362);
+  glFlush();
+}
+
+void draw_points() {
+  glPointSize(10);
+  glColor3f(1.0, 0.0, 0.0);
+  glBegin(GL_POINTS);
+  glVertex2f(0, 0);
+  glEnd();
+
+  glColor3f(0.0, 1.0, 0.0);
+  glBegin(GL_POINTS);
+  glVertex2f(_width, 0);
+  glVertex2f(-_width, 0);
+  glVertex2f(0, _height);
+  glVertex2f(0, -_height);
+  glVertex2f(_width/2.0, _width/2.0);
+  glEnd();
+
+  glColor3f(0.0, 0.0, 1.0);
+  glBegin(GL_POINTS);
+  glVertex2f(25, 25);
+  glEnd();
   glFlush();
 }
 
@@ -186,7 +219,11 @@ void CALLBACK display() {
 
   // draw_circle_by_triangle();
   // draw_circle_by_triangle2();
-  draw_triangle_fan();
+  // draw_triangle_fan();
+  // draw_points();
+  draw_circle_by_triangle_fan();
+
+  draw_points();
 }
 void CALLBACK myReshape(GLsizei w, GLsizei h)
 
@@ -196,12 +233,13 @@ void CALLBACK myReshape(GLsizei w, GLsizei h)
   glLoadIdentity();
 
   if (w <= h)
-    glOrtho(-50, 50, -50 * (GLfloat)h / (GLfloat)w,
-            50 * (GLfloat)h / (GLfloat)w, -1.0, 1.0);
+    glOrtho(-_width, _width, -_height * (GLfloat)h / (GLfloat)w,
+            _height * (GLfloat)h / (GLfloat)w, 0.0, 1.0);
   else {
     glOrtho(-50 * (GLfloat)w / (GLfloat)h, 50 * (GLfloat)w / (GLfloat)h, -50,
             50, -1.0, 1.0);
   }
+  // glOrtho(0, _width, _height,0,  0, 1.0);
 
   glMatrixMode(GL_MODELVIEW);
   // glLoadIdentity();
