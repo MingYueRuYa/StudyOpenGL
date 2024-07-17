@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "三角形", "第二章\三�
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "几何体", "几何体绘制\几何体.vcxproj", "{433F98AD-D3AE-465B-A9A9-6517BE0484CD}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "line", "line\line.vcxproj", "{5802668E-A4FA-4C3D-8D83-DFE7FE1CE879}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -41,6 +43,14 @@ Global
 		{433F98AD-D3AE-465B-A9A9-6517BE0484CD}.Release|x64.Build.0 = Release|x64
 		{433F98AD-D3AE-465B-A9A9-6517BE0484CD}.Release|x86.ActiveCfg = Release|Win32
 		{433F98AD-D3AE-465B-A9A9-6517BE0484CD}.Release|x86.Build.0 = Release|Win32
+		{5802668E-A4FA-4C3D-8D83-DFE7FE1CE879}.Debug|x64.ActiveCfg = Debug|x64
+		{5802668E-A4FA-4C3D-8D83-DFE7FE1CE879}.Debug|x64.Build.0 = Debug|x64
+		{5802668E-A4FA-4C3D-8D83-DFE7FE1CE879}.Debug|x86.ActiveCfg = Debug|Win32
+		{5802668E-A4FA-4C3D-8D83-DFE7FE1CE879}.Debug|x86.Build.0 = Debug|Win32
+		{5802668E-A4FA-4C3D-8D83-DFE7FE1CE879}.Release|x64.ActiveCfg = Release|x64
+		{5802668E-A4FA-4C3D-8D83-DFE7FE1CE879}.Release|x64.Build.0 = Release|x64
+		{5802668E-A4FA-4C3D-8D83-DFE7FE1CE879}.Release|x86.ActiveCfg = Release|Win32
+		{5802668E-A4FA-4C3D-8D83-DFE7FE1CE879}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

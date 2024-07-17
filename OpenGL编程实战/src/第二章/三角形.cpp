@@ -22,9 +22,12 @@ struct float3 {
   float w;
 };
 
-void init() {
-  glShadeModel(GL_FLAT);
-}
+struct Vertex {
+  float x, y, z;
+  float r, g, b;
+};
+
+void init() { glShadeModel(GL_FLAT); }
 
 void draw_lines() {
   glColor3f(1.0, 1.0, 0.0);
@@ -147,14 +150,14 @@ void draw_circle_by_triangle_fan() {
   float cx = 0, cy = 0, cz = 0;
   float r = 25;
 
-    _circle2[0].x = cx;
-    _circle2[0].y = cy;
-    _circle2[0].z = cz;
+  _circle2[0].x = cx;
+  _circle2[0].y = cy;
+  _circle2[0].z = cz;
 
   for (int i = 0; i <= 360; i++) {
-    _circle2[i+1].x = r * cos(M_PI / 180.0 * i) + cx;
-    _circle2[i+1].y = r * sin(M_PI / 180.0 * i) + cy;
-    _circle2[i+1].z = cz;
+    _circle2[i + 1].x = r * cos(M_PI / 180.0 * i) + cx;
+    _circle2[i + 1].y = r * sin(M_PI / 180.0 * i) + cy;
+    _circle2[i + 1].z = cz;
   }
 
   glEnableClientState(GL_VERTEX_ARRAY);
@@ -176,7 +179,7 @@ void draw_points() {
   glVertex2f(-_width, 0);
   glVertex2f(0, _height);
   glVertex2f(0, -_height);
-  glVertex2f(_width/2.0, _width/2.0);
+  glVertex2f(_width / 2.0, _width / 2.0);
   glEnd();
 
   glColor3f(0.0, 0.0, 1.0);
@@ -185,6 +188,18 @@ void draw_points() {
   glEnd();
   glFlush();
 }
+
+void draw_triangle_color() {
+  Vertex data[] = {{0, 0, 0, 1, 0, 0},
+                   {0, 25, 0, 0, 1, 0},
+                   {25, 25, 0, 0, 0, 1},
+                   {25, 50, 0, 1, 1, 0}};
+  glEnableClientState(GL_VERTEX_ARRAY);
+  glEnableClientState(GL_COLOR_ARRAY);
+  glVertexPointer(3, GL_FLOAT, sizeof(Vertex), data);
+  glColorPointer(3, GL_FLOAT, sizeof(Vertex), &(data[0].r));
+  glDrawArrays(GL_TRIANGLE_STRIP, 0, sizeof(data)/sizeof(Vertex));
+ }
 
 void CALLBACK display() {
   // draw_lines();
@@ -230,7 +245,8 @@ void CALLBACK display() {
   // draw_triangle_fan();
   // draw_points();
   // draw_circle_by_triangle_fan();
-  draw_triangle_strip();
+  // draw_triangle_strip();
+  draw_triangle_color();
   draw_points();
 }
 void CALLBACK myReshape(GLsizei w, GLsizei h)
