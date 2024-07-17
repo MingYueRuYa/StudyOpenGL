@@ -17,6 +17,11 @@
 int _width = 50;
 int _height = 50;
 
+struct float3 {
+  float x, y, z;
+  float w;
+};
+
 void init() {
   glShadeModel(GL_FLAT);
 }
@@ -83,11 +88,6 @@ void draw_circle_by_triangle() {
   glFlush();
 }
 
-struct float3 {
-  float x, y, z;
-  float w;
-};
-
 float3 _circle[360 * 3];
 
 void draw_circle_by_triangle2() {
@@ -130,6 +130,14 @@ void draw_triangle_fan() {
   glEnd();
 
   glFlush();
+}
+
+void draw_triangle_strip() {
+  glColor3f(1.0, 0.0, 0.0);
+  float3 rect[] = {{0, 0, 0}, {25, 0, 0}, {25, 25, 0}, {10, 25, 0}};
+  glEnableClientState(GL_VERTEX_ARRAY);
+  glVertexPointer(3, GL_FLOAT, sizeof(float3), rect);
+  glDrawArrays(GL_TRIANGLE_STRIP, 0, sizeof(rect) / sizeof(float3));
 }
 
 float3 _circle2[362] = {};
@@ -221,8 +229,8 @@ void CALLBACK display() {
   // draw_circle_by_triangle2();
   // draw_triangle_fan();
   // draw_points();
-  draw_circle_by_triangle_fan();
-
+  // draw_circle_by_triangle_fan();
+  draw_triangle_strip();
   draw_points();
 }
 void CALLBACK myReshape(GLsizei w, GLsizei h)
@@ -234,7 +242,7 @@ void CALLBACK myReshape(GLsizei w, GLsizei h)
 
   if (w <= h)
     glOrtho(-_width, _width, -_height * (GLfloat)h / (GLfloat)w,
-            _height * (GLfloat)h / (GLfloat)w, 0.0, 1.0);
+            _height * (GLfloat)h / (GLfloat)w, 0.0, 10.0);
   else {
     glOrtho(-50 * (GLfloat)w / (GLfloat)h, 50 * (GLfloat)w / (GLfloat)h, -50,
             50, -1.0, 1.0);
