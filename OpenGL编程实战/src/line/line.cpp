@@ -5,6 +5,7 @@
 #include <windows.h>
 // #include<GL\glut.h>
 #include <stdlib.h>
+#include <vector>
 
 #define _USE_MATH_DEFINES
 #include <math.h>
@@ -83,9 +84,25 @@ void draw_points() {
   glFlush();
 }
 
+void draw_smooth_line() {
+  std::vector<Vertex> _data = {{10, 10, 0}, {20, 0, 0}, {30, 20,0}};
+
+  glLineWidth(2);
+  glEnable(GL_LINE_SMOOTH);
+  glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+  glEnable(GL_BLEND);
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+  glColor3f(1.0, 0, 0);
+  glEnableClientState(GL_VERTEX_ARRAY);
+  glVertexPointer(3, GL_FLOAT, sizeof(Vertex), &_data[0]);
+  glDrawArrays(GL_LINE_STRIP, 0, _data.size());
+}
+
 void CALLBACK display() {
-  draw_lines();
-  draw_circle_by_line();
+  // draw_lines();
+  // draw_circle_by_line();
+  draw_smooth_line();
   draw_points();
 }
 void CALLBACK myReshape(GLsizei w, GLsizei h)

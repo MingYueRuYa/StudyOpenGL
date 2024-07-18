@@ -60,9 +60,27 @@ void draw_spline() {
     _array.push_back(pos);
   }
 
+  std::vector<float3> _keys;
+  for (int i = 0; i < spline.getNumPoints(); ++i) {
+    _keys.push_back(spline.getPoint(i)); 
+  }
+
+  glEnable(GL_LINE_SMOOTH);
+  glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
+  glEnable(GL_BLEND);
+  glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+
   glEnableClientState(GL_VERTEX_ARRAY);
   glVertexPointer(3, GL_FLOAT, sizeof(float3), &_array[0]);
   glDrawArrays(GL_LINE_STRIP, 0, _array.size());
+
+  glEnable(GL_POINT_SMOOTH);
+  glHint(GL_POINT_SMOOTH_HINT, GL_NICEST);
+
+  glPointSize(8);
+  glVertexPointer(3, GL_FLOAT, sizeof(float3), &_keys[0]);
+  glDrawArrays(GL_POINTS, 0, _keys.size());
 }
 
 
