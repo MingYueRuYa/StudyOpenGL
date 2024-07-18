@@ -13,6 +13,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "line", "line\line.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bezier", "bezier\bezier.vcxproj", "{F5336ED4-04B4-4D71-8209-D3C1B03EA0DF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spline", "spline\spline.vcxproj", "{988796A0-0699-4F88-B086-BAE26760C908}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -61,6 +63,14 @@ Global
 		{F5336ED4-04B4-4D71-8209-D3C1B03EA0DF}.Release|x64.Build.0 = Release|x64
 		{F5336ED4-04B4-4D71-8209-D3C1B03EA0DF}.Release|x86.ActiveCfg = Release|Win32
 		{F5336ED4-04B4-4D71-8209-D3C1B03EA0DF}.Release|x86.Build.0 = Release|Win32
+		{988796A0-0699-4F88-B086-BAE26760C908}.Debug|x64.ActiveCfg = Debug|x64
+		{988796A0-0699-4F88-B086-BAE26760C908}.Debug|x64.Build.0 = Debug|x64
+		{988796A0-0699-4F88-B086-BAE26760C908}.Debug|x86.ActiveCfg = Debug|Win32
+		{988796A0-0699-4F88-B086-BAE26760C908}.Debug|x86.Build.0 = Debug|Win32
+		{988796A0-0699-4F88-B086-BAE26760C908}.Release|x64.ActiveCfg = Release|x64
+		{988796A0-0699-4F88-B086-BAE26760C908}.Release|x64.Build.0 = Release|x64
+		{988796A0-0699-4F88-B086-BAE26760C908}.Release|x86.ActiveCfg = Release|Win32
+		{988796A0-0699-4F88-B086-BAE26760C908}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
