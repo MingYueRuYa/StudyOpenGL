@@ -28,8 +28,8 @@ class GLContext {
     _hDC = hDC;
     unsigned PixelFormat;
 
-    PPIXELFORMATDESCRIPTOR pfd = {
-        sizeof(PPIXELFORMATDESCRIPTOR),
+    const PIXELFORMATDESCRIPTOR pfd = {
+        sizeof(PIXELFORMATDESCRIPTOR),
         1,
         PFD_DRAW_TO_WINDOW | PFD_SUPPORT_OPENGL | PFD_DOUBLEBUFFER,
         PFD_TYPE_RGBA,

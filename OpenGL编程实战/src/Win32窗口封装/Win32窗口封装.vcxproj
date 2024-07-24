@@ -19,10 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="line.cpp" />
+    <ClInclude Include="GLContext.h" />
+    <ClInclude Include="OpenGLWindow.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GLContext.h" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
@@ -98,7 +99,7 @@
       <AdditionalIncludeDirectories>../../include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>../../LIB</AdditionalLibraryDirectories>
       <AdditionalDependencies>GLAUX.LIB;%(AdditionalDependencies)</AdditionalDependencies>
