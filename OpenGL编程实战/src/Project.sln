@@ -15,6 +15,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "bezier", "bezier\bezier.vcx
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "spline", "spline\spline.vcxproj", "{988796A0-0699-4F88-B086-BAE26760C908}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Win32窗口封装", "Win32窗口封装\Win32窗口封装.vcxproj", "{5EA54A61-F2C0-4C16-AB1F-6CBD3F06EC1A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -71,6 +73,14 @@ Global
 		{988796A0-0699-4F88-B086-BAE26760C908}.Release|x64.Build.0 = Release|x64
 		{988796A0-0699-4F88-B086-BAE26760C908}.Release|x86.ActiveCfg = Release|Win32
 		{988796A0-0699-4F88-B086-BAE26760C908}.Release|x86.Build.0 = Release|Win32
+		{5EA54A61-F2C0-4C16-AB1F-6CBD3F06EC1A}.Debug|x64.ActiveCfg = Debug|x64
+		{5EA54A61-F2C0-4C16-AB1F-6CBD3F06EC1A}.Debug|x64.Build.0 = Debug|x64
+		{5EA54A61-F2C0-4C16-AB1F-6CBD3F06EC1A}.Debug|x86.ActiveCfg = Debug|Win32
+		{5EA54A61-F2C0-4C16-AB1F-6CBD3F06EC1A}.Debug|x86.Build.0 = Debug|Win32
+		{5EA54A61-F2C0-4C16-AB1F-6CBD3F06EC1A}.Release|x64.ActiveCfg = Release|x64
+		{5EA54A61-F2C0-4C16-AB1F-6CBD3F06EC1A}.Release|x64.Build.0 = Release|x64
+		{5EA54A61-F2C0-4C16-AB1F-6CBD3F06EC1A}.Release|x86.ActiveCfg = Release|Win32
+		{5EA54A61-F2C0-4C16-AB1F-6CBD3F06EC1A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
