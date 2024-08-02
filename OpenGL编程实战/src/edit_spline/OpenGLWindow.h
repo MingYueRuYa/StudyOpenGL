@@ -57,6 +57,7 @@ class OpenGLWindow : public GLContext {
         swapBuffer();
       }
     }
+    shutdown();
     return true;
   }
   virtual void render() {}

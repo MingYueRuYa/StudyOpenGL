@@ -88,6 +88,8 @@ class SplineEditor : public OpenGLWindow {
           _mouseOld = pt;
           _keys[_selectIndex].x += off.x;
           _keys[_selectIndex].y += off.y;
+                    _spline.getPoint(_selectIndex).x    +=  off.x;
+                    _spline.getPoint(_selectIndex).y    +=  off.y;
           _spline.recalcTangents();
           _array.clear();
           for (float t = 0; t < 1.0f; t += 0.01f) {
@@ -97,7 +99,7 @@ class SplineEditor : public OpenGLWindow {
         }
       } break;
       default:
-        DefWindowProc(hWnd, msgId, wParam, lParam);
+        return DefWindowProc(hWnd, msgId, wParam, lParam);
     }
 
     return 0;
