@@ -43,11 +43,15 @@ class SplineEditor : public OpenGLWindow {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
 
+    //glEnable(GL_LINE_SMOOTH);
+    //glHint(GL_LINE_SMOOTH_HINT, GL_NICEST);
     glOrtho(0, _width, _height, 0, -100, 100);
     glEnableClientState(GL_VERTEX_ARRAY);
     glVertexPointer(3, GL_FLOAT, sizeof(float3), &_array[0]);
     glDrawArrays(GL_LINE_STRIP, 0, _array.size());
 
+    //glEnable(GL_POINT_SMOOTH);
+    //glHint(GL_POINT_SMOOTH_HINT, GL_NICEST);
     glPointSize(8);
     glVertexPointer(3, GL_FLOAT, sizeof(float3), &_keys[0]);
     glDrawArrays(GL_POINTS, 0, _keys.size());

@@ -1,6 +1,9 @@
 #pragma once
 
 #include <Windows.h>
+
+#include "glew/glew.h"
+#include "glew/wglew.h"
 #include <gl/GL.h>
 
 class GLContext {
@@ -62,6 +65,29 @@ class GLContext {
     }
 
     if (!SetPixelFormat(_hDC, PixelFormat, &pfd)) {
+      GLenum error = glGetError();
+      return false;
+    }
+
+    _hRC = wglCreateContext(_hDC);
+    if (!wglMakeCurrent(_hDC, _hRC)) {
+      return false;
+    }
+
+    glewInit();
+
+    int format = setupMultisample();
+
+    if (format == 0) {
+      format = PixelFormat;
+    }
+    if (_hRC != NULL) {
+      wglMakeCurrent(_hDC, NULL);
+      wglDeleteContext(_hRC);
+      _hRC = NULL;
+    }
+
+    if (!SetPixelFormat(_hDC, format, &pfd)) {
       return false;
     }
 
@@ -71,6 +97,42 @@ class GLContext {
     }
 
     return true;
+  }
+
+  int setupMultisample() {
+    if (wglChoosePixelFormatARB == 0) {
+      return 0;
+    }
+
+    int pixelFormat;
+    int valid;
+    UINT numFormats;
+    float fAttributes[] = {0, 0};
+
+    // These Attributes Are The Bits We Want To Test For In Our Sample
+    // Everything Is Pretty Standard, The Only One We Want To
+    // Really Focus On Is The SAMPLE BUFFERS ARB And WGL SAMPLES
+    // These Two Are Going To Do The Main Testing For Whether Or Not
+    // We Support Multisampling On This Hardware.
+    int iAttributes[] = {
+        WGL_DRAW_TO_WINDOW_ARB, GL_TRUE,
+        WGL_SUPPORT_OPENGL_ARB,GL_TRUE,
+        WGL_ACCELERATION_ARB,WGL_FULL_ACCELERATION_ARB,
+        WGL_COLOR_BITS_ARB, 24,
+        WGL_ALPHA_BITS_ARB,8,
+        WGL_DEPTH_BITS_ARB,16,
+        WGL_STENCIL_BITS_ARB,0,
+        WGL_DOUBLE_BUFFER_ARB,GL_TRUE,
+        WGL_SAMPLE_BUFFERS_ARB,GL_TRUE,
+        WGL_SAMPLES_ARB,4,
+        0, 0};
+    valid = wglChoosePixelFormatARB(_hDC, iAttributes, fAttributes, 1,
+                                    &pixelFormat, &numFormats);
+
+    if (valid && numFormats >= 1) {
+      return pixelFormat;
+    }
+    return 0;
   }
 
   void shutdown() {
